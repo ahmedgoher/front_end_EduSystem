@@ -1,3 +1,46 @@
 body {
   font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  background-color: #121212;
+}
+.personInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 250px;
+  align-items: center;
+  padding: 20px;
+}
+
+.personalpic {
+  max-width: 150px;
+}
+
+.side {
+  position: sticky;
+  max-width: 280px;
+  color: #eee;
+  height: 100vh;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+
+  background-color: #222831;
+}
+.sidebar {
+  width: 250px;
+  transition: transform 0.3s ease-in-out;
+}
+.sidebar-nav .nav-link {
+  border-radius: 8px;
+  margin-bottom: 8px;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+.sidebar-nav .nav-link i {
+  font-size: 1.2rem;
+}
+
+.sidebar-nav .nav-link:hover,
+.sidebar-nav .nav-link.active {
+  background-color: #3b3b3b;
+  color: #fff;
 }
