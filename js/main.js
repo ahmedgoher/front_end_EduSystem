@@ -5,14 +5,6 @@ menuToggle.addEventListener("click", () => {
   sidebar.classList.toggle("active");
 });
 
-let mainpage = document.getElementById("mainpage");
-let Subjectspage = document.getElementById("Subjectspage");
-let Reportspage = document.getElementById("Reportspage");
-let Teacherspage = document.getElementById("Teacherspage");
-let Billingpage = document.getElementById("Billingpage");
-let Notificationspage = document.getElementById("Notificationspage");
-let Settingspage = document.getElementById("Settingspage");
-
 let queryss = document.querySelectorAll(".dashbtn");
 queryss.forEach((btn) => {
   btn.addEventListener("click", function () {
