@@ -1,46 +1,94 @@
 body {
   font-family: "Roboto", sans-serif;
   min-height: 100vh;
-  background-color: #121212;
+  background-color: #eceedf;
+  color: #222831;
 }
 .personInfo {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 250px;
+  height: 230px;
   align-items: center;
   padding: 20px;
 }
 
 .personalpic {
-  max-width: 150px;
+  max-width: 120px;
+  border: 3px solid #3a3a3a;
 }
 
 .side {
-  position: sticky;
+  position: fixed;
   max-width: 280px;
-  color: #eee;
+  /* color: #eee; */
   height: 100vh;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
-
   background-color: #222831;
 }
 .sidebar {
-  width: 250px;
+  width: 100%;
   transition: transform 0.3s ease-in-out;
 }
 .sidebar-nav .nav-link {
   border-radius: 8px;
   margin-bottom: 8px;
   padding: 10px 15px;
-  transition: background-color 0.3s ease;
+  color: #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .sidebar-nav .nav-link i {
   font-size: 1.2rem;
+  margin-left: 8px;
 }
 
 .sidebar-nav .nav-link:hover,
 .sidebar-nav .nav-link.active {
   background-color: #3b3b3b;
   color: #fff;
+}
+.content {
+  margin-right: 280px; /* يخلي المحتوى يبدأ بعد السايد بار */
+  width: calc(100% - 280px);
+  min-height: 100vh;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* النافبار */
+.content nav {
+  height: 72px;
+  /* background-color: #1e1e1e; */
+  box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.5);
+  color: #000;
+}
+/* موبايل: السايد بار يختفي برا الشاشة */
+@media (max-width: 768px) {
+  .side {
+    transform: translateX(-100%); /* يخليها تختفي */
+    transition: transform 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* عرض السايد بار في الموبايل */
+    z-index: 1000;
+  }
+
+  .side.active {
+    transform: translateX(0); /* تظهر تاني */
+  }
+
+  .content {
+    margin-right: 0; /* المحتوى يبقى بعرض الشاشة */
+    width: 100%;
+  }
+}
+.contentdash {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.montg {
+  width: 80%;
+  margin: auto;
 }
