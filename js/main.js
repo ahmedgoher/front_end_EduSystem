@@ -12,27 +12,3 @@ queryss.forEach((btn) => {
     this.classList.add("active", "text-white");
   });
 });
-
-Subjectspage.onclick = function () {
-  Subjectspage.classList.add("active");
-};
-// let btn = [
-//   mainpage,
-//   Subjectspage,
-//   Reportspage,
-//   Teacherspage,
-//   Billingpage,
-//   Notificationspage,
-//   Settingspage,
-// ];
-
-// function addactive(clickbtn) {
-//   btn.forEach((b) => b.classList.remove("active", "text-white")); // نشيل الكلاسات من الكل
-//   clickbtn.classList.add("active", "text-white");
-// }
-
-// btn.forEach((b) => {
-//   b.addEventListener("click", function () {
-//     setActive(this);
-//   });
-// });
