@@ -1,125 +1,131 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>لوحه تحكم الطالب</title>
-    <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="d-flex">
-      <div class="side sidebar bg-body-tertiary d-none d-md-block">
-        <a href="" style="color: #bbdce5"
-          ><i id="menu-toggle" class="fa-solid fa-bars fs-2 d-md-none"></i>
-        </a>
-        <div class="personInfo">
-          <img
-            class="img-fluid rounded-circle shadow personalpic"
-            src="img/books.png"
-            alt="صوره الطالب"
-            srcset=""
-          />
-          <h3>أحمد جوهر</h3>
-        </div>
-        <div class="sidebar d-flex flex-column p-3">
-          <nav class="nav flex-column sidebar-nav">
-            <a class="nav-link text-white active" href="#"
-              ><i class="fa-solid fa-house ms-2"></i> الرئيسية
-            </a>
-            <a class="nav-link" href="#"
-              ><i class="fa-solid fa-book ms-2"></i> المواد
-            </a>
-            <a class="nav-link" href="#"
-              ><i class="fa-solid fa-chart-line ms-2"></i> التقارير
-            </a>
-            <a class="nav-link" href="#"
-              ><i class="fa-solid fa-chalkboard-teacher ms-2"></i> المعلمين
-            </a>
-            <a class="nav-link" href="#"
-              ><i class="fa-regular fa-money-bill-1 ms-2"></i> الفواتير
-            </a>
 
-            <a class="nav-link" href="#"
-              ><i class="fa-solid fa-bell ms-2"></i> الإشعارات
-            </a>
-            <a class="nav-link" href="#"
-              ><i class="fa-solid fa-gear ms-2"></i> الإعدادات
-            </a>
-          </nav>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>لوحه تحكم الطالب</title>
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div class="d-flex">
+    <div class="side sidebar bg-body-tertiary d-none d-md-block">
+      <a href="" style="color: #bbdce5"><i id="menu-toggle" class="fa-solid fa-bars fs-2 d-md-none"></i>
+      </a>
+      <div class="personInfo">
+        <img class="img-fluid rounded-circle shadow personalpic" src="img/books.png" alt="صوره الطالب" srcset="" />
+        <h3>أحمد جوهر</h3>
       </div>
-      <div class="content bg-body-tertiary">
-        <nav class="navbar bg-body-tertiary">
-          <div class="container-fluid n">
-            <a class="navbar-brand">Navbar</a>
-            <div class="endnav d-flex m-2">
-              <form class="d-lg-flex d-none ms-2" role="search">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button class="btn btn-outline-success me-1" type="submit">
-                  Search
-                </button>
-              </form>
-              <button
-                type="button "
-                class="me-4 btn position-relative d-none d-md-block"
-              >
-                <i class="fa-solid fa-bell"></i>
-                <span
-                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                >
-                  99+
-                  <span class="visually-hidden">unread messages</span>
-                </span>
-              </button>
-            </div>
-            <i id="menu-toggle" class="fa-solid fa-bars fs-2 d-md-none"></i>
-          </div>
+      <div class="sidebar d-flex flex-column p-3">
+        <nav class="nav flex-column sidebar-nav">
+          <a class="nav-link text-white active dashbtn disactive" href="#" data-target="home"><i
+              class="fa-solid fa-house ms-2"></i>
+            الرئيسية
+          </a>
+          <a class="nav-link dashbtn disactive" href="#" data-target="subjects"><i class="fa-solid fa-book ms-2"></i>
+            المواد
+          </a>
+          <a class="nav-link dashbtn disactive" href="#" data-target="reports"><i
+              class="fa-solid fa-chart-line ms-2"></i> التقارير
+          </a>
+          <a class="nav-link dashbtn disactive" href="#" data-target=""><i
+              class="fa-solid fa-chalkboard-teacher ms-2"></i> المعلمين
+          </a>
+          <a class="nav-link dashbtn disactive" href="#" data-target="invoices"><i
+              class="fa-regular fa-money-bill-1 ms-2"></i> الفواتير
+          </a>
+
+          <a class="nav-link dashbtn disactive" href="#" data-target="home"><i class="fa-solid fa-bell ms-2"></i>
+            الإشعارات
+          </a>
+          <a class="nav-link dashbtn disactive" href="#" data-target="home"><i class="fa-solid fa-gear ms-2"></i>
+            الإعدادات
+          </a>
         </nav>
-        <!-- <div class="contentdash">
-          <div
-            class="montg d-flex flex-column flex-sm-row justify-content-sm-around"
-          >
-            <div class="card m-2" style="width: 18rem">
-              <img src="img/books.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card’s content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-            <div class="card m-2" style="width: 18rem">
-              <img src="img/books.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card’s content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
+    <div class="content bg-body-tertiary">
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid n">
+          <a class="navbar-brand">Navbar</a>
+          <div class="endnav d-flex m-2">
+            <form class="d-lg-flex d-none ms-2" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <button class="btn btn-outline-success me-1" type="submit">
+                Search
+              </button>
+            </form>
+            <button type="button " class="me-4 btn position-relative d-none d-md-block">
+              <i class="fa-solid fa-bell"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                99+
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </button>
+          </div>
+          <i id="menu-toggle" class="fa-solid fa-bars fs-2 d-md-none"></i>
+        </div>
+      </nav>
+      <div id="subjects" class="page active">
+        <div class="container-fluid mt-4">
+          <div class="row">
+            <div class="col-12">
+              <div class="card p-3 mb-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h5 class="mb-0">المحاضرات المشتركة</h5>
+                  <div class="d-flex">
+                    <input type="text" class="form-control me-2" placeholder="اختبار البحث" style="width: 200px;">
+                    <button class="btn btn-outline-secondary">بحث</button>
+                  </div>
+                </div>
+                <div class="card p-3">
+                  <table class="table table-hover text-center align-middle">
+                    <thead>
+                      <tr>
+                        <th>ترتيب</th>
+                        <th>كود الكورس</th>
+                        <th>المحاضرة</th>
+                        <th>تفاصيل الكورس</th>
+                        <th>الانتهاء من الكورس</th>
+                        <th>عرض</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td colspan="6">لا توجد بيانات</td>
+                      </tr>
+                      <!-- يمكنك إضافة المزيد من الصفوف هنا -->
+                    </tbody>
+                  </table>
+                  <div class="d-flex justify-content-between mt-3">
+                    <button class="btn btn-secondary">السابق</button>
+                    <button class="btn btn-primary">التالي</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="invoices" class="page d-none">
+          <div class="container">
+            <h3>الفواتير</h3>
+            <p>هنا هتتعرض بيانات الفواتير.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/all.min.js"></script>
     <script src="js/main.js"></script>
-  </body>
+</body>
+
 </html>

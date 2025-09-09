@@ -4,6 +4,7 @@ body {
   background-color: #eceedf;
   color: #222831;
 }
+
 .personInfo {
   display: flex;
   flex-direction: column;
@@ -26,10 +27,12 @@ body {
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
   background-color: #222831;
 }
+
 .sidebar {
   width: 100%;
   transition: transform 0.3s ease-in-out;
 }
+
 .sidebar-nav .nav-link {
   border-radius: 8px;
   margin-bottom: 8px;
@@ -37,6 +40,7 @@ body {
   color: #000;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .sidebar-nav .nav-link i {
   font-size: 1.2rem;
   margin-left: 8px;
@@ -47,8 +51,10 @@ body {
   background-color: #3b3b3b;
   color: #fff;
 }
+
 .content {
-  margin-right: 280px; /* يخلي المحتوى يبدأ بعد السايد بار */
+  margin-right: 280px;
+  /* يخلي المحتوى يبدأ بعد السايد بار */
   width: calc(100% - 280px);
   min-height: 100vh;
   background-color: #121212;
@@ -62,33 +68,77 @@ body {
   box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.5);
   color: #000;
 }
+
 /* موبايل: السايد بار يختفي برا الشاشة */
 @media (max-width: 768px) {
   .side {
-    transform: translateX(-100%); /* يخليها تختفي */
+    transform: translateX(-100%);
+    /* يخليها تختفي */
     transition: transform 0.3s ease-in-out;
     position: fixed;
     top: 0;
     left: 0;
-    width: 250px; /* عرض السايد بار في الموبايل */
+    width: 250px;
+    /* عرض السايد بار في الموبايل */
     z-index: 1000;
   }
 
   .side.active {
-    transform: translateX(0); /* تظهر تاني */
+    transform: translateX(0);
+    /* تظهر تاني */
   }
 
   .content {
-    margin-right: 0; /* المحتوى يبقى بعرض الشاشة */
+    margin-right: 0;
+    /* المحتوى يبقى بعرض الشاشة */
     width: 100%;
   }
 }
+
 .contentdash {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
+
 .montg {
   width: 80%;
   margin: auto;
+}
+
+/* CourseSts  kkkkkkkkkkk*/
+.content {
+  padding: 2rem;
+  background-color: #ebebeb;
+  box-shadow: 0 2px 3px 5px rgba(198, 191, 191, 0.5);
+}
+
+.card {
+  background: #3a3b3d;
+  border: none;
+  color: #fff;
+}
+
+.table {
+  color: #000;
+  width: 100%;
+}
+
+.table th {
+  color: #3a3a3a;
+}
+
+.btn-custom {
+  background: red;
+  color: #fff;
+}
+
+.page {
+  display: none;
+  width: 100%;
+  padding: 1rem;
+}
+
+.page:not(.d-none) {
+  display: block;
 }
