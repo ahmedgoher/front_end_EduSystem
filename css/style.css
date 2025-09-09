@@ -24,7 +24,7 @@ body {
   /* color: #eee; */
   height: 100vh;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
-  background-color: #222831;
+  /* background-color: #222831; */
 }
 .sidebar {
   width: 100%;
@@ -58,7 +58,8 @@ body {
 /* النافبار */
 .content nav {
   height: 72px;
-  /* background-color: #1e1e1e; */
+  position: sticky;
+  top: 0; /* background-color: #1e1e1e; */
   box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.5);
   color: #000;
 }
@@ -79,16 +80,131 @@ body {
   }
 
   .content {
-    margin-right: 0; /* المحتوى يبقى بعرض الشاشة */
+    margin-right: 0; /*المحتوى يبقى بعرض الشاشة */
     width: 100%;
   }
 }
 .contentdash {
+  color: #121212;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
 }
-.montg {
-  width: 80%;
-  margin: auto;
+.main {
+  font-size: 26px;
+  background-color: #eee;
+  border: 1px solid #bca9a9;
+  border-radius: 10px;
+  box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.5);
+  height: calc(100vh - 80px);
+  padding: 35px;
+  padding-top: 40px;
+  color: #3b3b3b;
+}
+.main label {
+  font-weight: 500;
+}
+.main input {
+  padding: 10px;
+  letter-spacing: 2px;
+}
+.main input::placeholder {
+  font-size: 20px;
+  color: #121212;
+}
+.main p {
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 10px;
+    padding-top: 40px;
+
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 425px) {
+  .main {
+    font-size: 10px;
+  }
+}
+
+.contentdash .active {
+  display: block;
+}
+
+.contentdash .disactive {
+  display: none;
+}
+
+.Reportspage {
+  border: 1px solid #bca9a9;
+  box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  height: calc(100vh - 100px);
+}
+
+.Reportspage .choose-Sub {
+  margin: 20px 10px 30px 0;
+}
+.Reportspage .dropdown .repbtn {
+  background-color: #3b3b3b;
+  color: #fff;
+}
+.Reportspage .dropdown-menu .dropdown-item:hover {
+  background-color: #3b3b3b;
+  color: #fff;
+}
+.Reportspage .sub-choose {
+  gap: 40px;
+}
+
+@media (max-width: 425px) {
+  .Reportspage .sub-choose {
+    gap: 14px;
+  }
+}
+.input-group {
+  position: relative;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 350px; /* عرض مناسب */
+  direction: rtl; /* عشان العربي */
+}
+
+.input-group input {
+  width: 50%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9; /*لون خلفية خفيف*/
+  color: #333;
+  outline: none;
+  height: 37.6px;
+}
+@media (max-width: 768px) {
+  .input-group input {
+    width: 100%;
+  }
+}
+
+.input-group input:disabled {
+  /* background: #f1f1f1; */
+  color: #666;
+  /* cursor: not-allowed; */
+}
+
+.input-group label {
+  position: absolute;
+  right: 12px; /* بدل left عشان RTL */
+  top: -8px;
+  background: #f9f9f9;
+  border-radius: 20px;
+  padding: 0 5px;
+  color: #000;
+  font-size: 13px;
+  height: 20px;
 }
