@@ -56,7 +56,7 @@
           </nav>
         </div>
       </div>
-      <div class="content bg-body-tertiary">
+      <div class="content bg-body-tertiary d-flex flex-column">
         <nav class="navbar bg-body-tertiary">
           <div class="container-fluid n">
             <a class="navbar-brand">Navbar</a>
@@ -88,8 +88,204 @@
             <i id="menu-toggle" class="fa-solid fa-bars fs-2 d-md-none"></i>
           </div>
         </nav>
-        <!-- <div class="contentdash">
-          <div
+        <div class="contentdash d-flex flex-column justify-content-center">
+          <!-- main page -->
+          <div class="main m-4 disactive">
+            <div class="mb-3">
+              <label for="name" class="form-label"
+                ><span><i class="fa-regular fa-user"></i> الاسم</span></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="أحمد عبد الناصر محمد جوهر "
+                disabled
+              />
+            </div>
+            <div class="mb-3">
+              <label for="age" class="form-label"
+                ><span
+                  ><i class="fa-regular fa-calendar"></i> العمر</span
+                ></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="age"
+                placeholder="20 "
+                disabled
+              />
+            </div>
+            <div class="mb-3">
+              <label for="age" class="form-label"
+                ><i class="fa-solid fa-hashtag"></i> كود الطالب
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                id="age"
+                placeholder="2348612 "
+                disabled
+              />
+            </div>
+            <div class="mb-3">
+              <label for="age" class="form-label">
+                <span
+                  ><i class="fa-solid fa-phone"></i> رقم الهاتف
+                </span></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="age"
+                placeholder="01068045341 "
+                disabled
+              />
+            </div>
+            <div class="mb-3">
+              <label for="age" class="form-label"
+                ><span>
+                  <i class="fa-solid fa-phone"></i> رقم هاتف ولي
+                </span></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="age"
+                placeholder="01005338511 "
+                disabled
+              />
+            </div>
+            <div class="btns"></div>
+          </div>
+          <!-- Subjectspage -->
+          <div class="Subjectspage disactive"></div>
+          <!-- Reportspage -->
+          <div class="Reportspage m-3">
+            <div class="sub-choose d-flex mb-3">
+              <div class="dropdown choose-Sub me-3">
+                <button
+                  class="btn dropdown-toggle repbtn"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  اختر المادة
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" data-subject="arabic" href="#"
+                      >عربي</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-subject="english" href="#"
+                      >انجليزي</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-subject="chemistry" href="#"
+                      >كيمياء</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="input-group">
+                <input type="text" id="studentName" value="" disabled />
+                <label for="studentName">اسم المادة</label>
+              </div>
+            </div>
+
+            <!-- جدول عربي -->
+            <table
+              class="table table-striped table-hover subject-table"
+              id="arabic"
+            >
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>اسم الكورس</th>
+                  <th>تسليم الواجب</th>
+                  <th>درجات الامتحان</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <td>الوحدة الأولى عربي</td>
+                  <td>تم التسليم</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>مراجعة على الوحدة الأولى</td>
+                  <td>تحت المراجعة</td>
+                  <td>49</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- جدول إنجليزي -->
+            <table
+              class="table table-striped table-hover subject-table d-none"
+              id="english"
+            >
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>اسم الكورس</th>
+                  <th>تسليم الواجب</th>
+                  <th>درجات الامتحان</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <td>Unit 1 English</td>
+                  <td>Submitted</td>
+                  <td>45</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>Review Unit 1</td>
+                  <td>Not Submitted</td>
+                  <td>38</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- جدول كيمياء -->
+            <table
+              class="table table-striped table-hover subject-table d-none"
+              id="chemistry"
+            >
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>اسم الكورس</th>
+                  <th>تسليم الواجب</th>
+                  <th>درجات الامتحان</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <td>الوحدة الأولى كيمياء</td>
+                  <td>تم التسليم</td>
+                  <td>48</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>الوحدة الثانية كيمياء</td>
+                  <td>لم يسلم بعد</td>
+                  <td>41</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!--   <div
             class="montg d-flex flex-column flex-sm-row justify-content-sm-around"
           >
             <div class="card m-2" style="width: 18rem">
@@ -114,8 +310,8 @@
                 <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
             </div>
-          </div>
-        </div> -->
+          </div> -->
+        </div>
       </div>
     </div>
     <script src="js/main.js"></script>
