@@ -16,7 +16,7 @@
   </head>
   <body>
     <div class="d-flex">
-      <div class="side sidebar bg-body-tertiary d-none d-md-block">
+      <div class="side sidebar d-none d-md-block">
         <a href="" style="color: #bbdce5"
           ><i id="menu-toggle" class="fa-solid fa-bars fs-2 d-md-none"></i>
         </a>
@@ -56,8 +56,8 @@
           </nav>
         </div>
       </div>
-      <div class="content bg-body-tertiary d-flex flex-column">
-        <nav class="navbar bg-body-tertiary">
+      <div class="content d-flex flex-column">
+        <nav class="navbar">
           <div class="container-fluid n">
             <a class="navbar-brand">Navbar</a>
             <div class="endnav d-flex m-2">
@@ -90,7 +90,7 @@
         </nav>
         <div class="contentdash d-flex flex-column justify-content-center">
           <!-- main page -->
-          <div class="main m-4">
+          <div class="main m-3">
             <div class="mb-3">
               <label for="name" class="form-label"
                 ><span><i class="fa-regular fa-user"></i> الاسم</span></label
@@ -305,35 +305,72 @@
             </div>
 
             <!-- Invoices Table -->
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>اسم الكورس</th>
-                  <th>تاريخ الفاتورة</th>
-                  <th>الحالة</th>
-                  <th>المبلغ</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Unit 1 English</td>
-                  <td>2025-09-01</td>
-                  <td><span class="badge paid">مدفوع</span></td>
-                  <td>$45</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Review Unit 1</td>
-                  <td>2025-09-05</td>
-                  <td><span class="badge unpaid">غير مدفوع</span></td>
-                  <td>$38</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>اسم الكورس</th>
+                    <th>تاريخ الفاتورة</th>
+                    <th>الحالة</th>
+                    <th>المبلغ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Unit 1 English</td>
+                    <td>2025-09-01</td>
+                    <td><span class="badge paid">مدفوع</span></td>
+                    <td>$45</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Review Unit 1</td>
+                    <td>2025-09-05</td>
+                    <td><span class="badge unpaid">غير مدفوع</span></td>
+                    <td>$38</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-
+          <div class="Notification m-3">
+            <div class="conteners">
+              <div class="cont">
+                <i class="fa-solid fa-x close"></i>
+                <h5>ماده عربي <span>-مستر يوسف</span></h5>
+                <p>
+                  تم اضافه واجب جديد علي الوحده الاولي التسليم حتى يوم السبت
+                  20/9
+                </p>
+              </div>
+              <div class="cont">
+                <i class="fa-solid fa-x close"></i>
+                <h5>ماده عربي <span>-مستر يوسف</span></h5>
+                <p>
+                  تم اضافه واجب جديد علي الوحده الاولي التسليم حتى يوم السبت
+                  20/9
+                </p>
+              </div>
+              <div class="cont">
+                <i class="fa-solid fa-x close"></i>
+                <h5>ماده عربي <span>-مستر يوسف</span></h5>
+                <p>
+                  تم اضافه واجب جديد علي الوحده الاولي التسليم حتى يوم السبت
+                  20/9
+                </p>
+              </div>
+              <div class="cont">
+                <i class="fa-solid fa-x close"></i>
+                <h5>ماده عربي <span>-مستر يوسف</span></h5>
+                <p>
+                  تم اضافه واجب جديد علي الوحده الاولي التسليم حتى يوم السبت
+                  20/9
+                </p>
+              </div>
+            </div>
+          </div>
           <!--   <div
             class="montg d-flex flex-column flex-sm-row justify-content-sm-around"
           >
