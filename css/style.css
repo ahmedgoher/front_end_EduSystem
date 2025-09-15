@@ -143,7 +143,8 @@ body {
 .Reportspage,
 .invoices-container,
 .Notification,
-.Subjectspage {
+.Subjectspage,
+.Settingspage {
   background: white;
   border-radius: 20px;
   box-shadow: var(--card-shadow);
@@ -227,99 +228,6 @@ body {
 /* Subjectspage */
 /* subjects page  */
 
-.Subjectspage {
-  background-color: var(--content-bg);
-  display: flex;
-  box-shadow: 2px 3px 10px var(--card-shadow);
-}
-
-.search {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.search input {
-  padding: 8px 0;
-  border: 1px solid var(--border-color);
-}
-
-.search input::placeholder {
-  padding: 5px;
-  color: var(--main-color);
-}
-
-.search input:hover {
-  transform: scale(1.02);
-}
-
-.search .icon {
-  color: var(--accent-color);
-  background-color: var(--white-color);
-  padding: 15px;
-  border: 1px solid var(--accent-color);
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.search .icon:hover {
-  color: var(--white-color);
-  background-color: var(--accent-color);
-}
-
-.Subjectspage .content {
-  background-color: var(--content-bg);
-  margin: auto;
-  width: 100%;
-}
-
-.Subjectspage .content {
-  background-color: var(--secondary-color);
-}
-
-.Subjectspage .content table {
-  border-collapse: collapse;
-  font-size: 15px;
-  text-align: left;
-  box-shadow: 1px 2px 5px var(--card-shadow);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.Subjectspage .content table thead {
-  background-color: var(--text-secondary);
-  color: var(--text-primary);
-}
-
-.Subjectspage .content table thead th {
-  letter-spacing: 0.5px;
-  font-weight: bold;
-}
-
-.Subjectspage .content table tbody tr button {
-  color: var(--white-color);
-  background-color: var(--primary-color);
-  border-radius: 5px;
-}
-@media (max-width: 768px) {
-  .Subjectspage {
-    padding: 15px;
-  }
-
-  .Subjectspage .title h3 {
-    font-size: 18px;
-  }
-
-  .Subjectspage .title p {
-    font-size: 13px;
-  }
-
-  .table th,
-  .table td {
-    font-size: 12px;
-    padding: 10px;
-  }
-}
 /* Reports Page */
 .Reportspage {
   background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
