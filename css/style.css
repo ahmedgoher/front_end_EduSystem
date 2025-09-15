@@ -54,6 +54,7 @@ body {
   height: 100vh;
   box-shadow: var(--card-shadow);
   background: var(--sidebar-bg);
+  z-index: 1000;
 }
 
 .sidebar {
@@ -99,27 +100,25 @@ body {
   top: 0;
   background-color: var(--sidebar-bg);
   box-shadow: var(--card-shadow);
-  color: var(--accent-color);
-  z-index: 1000;
   display: flex;
   align-items: center;
   padding: 0 20px;
   font-weight: 600;
+  z-index: 1000;
 }
 #menu-toggle {
   cursor: pointer;
+  background: none;
+  border: none;
+  display: none; /* مخفي في الشاشات الكبيرة */
 }
-
 /* Mobile Sidebar */
 @media (max-width: 768px) {
   .side {
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-    position: fixed;
-    top: 0;
-    left: 0;
+    transform: translateX(100%);
+    right: 0;
     width: 250px;
-    z-index: 1000;
+    z-index: 2000;
   }
 
   .side.active {
@@ -129,7 +128,10 @@ body {
   .content {
     margin-right: 0;
     width: 100%;
-    /* padding: 15px; */
+  }
+
+  #menu-toggle {
+    display: inline-block; /* يظهر في الشاشات الصغيرة */
   }
 }
 
@@ -140,7 +142,8 @@ body {
 .main,
 .Reportspage,
 .invoices-container,
-.Notification {
+.Notification,
+.Subjectspage {
   background: white;
   border-radius: 20px;
   box-shadow: var(--card-shadow);
@@ -148,6 +151,7 @@ body {
   padding: 30px;
   transition: all 0.3s ease;
   border: 1px solid var(--border-color);
+  display: none;
 }
 .main:hover,
 .Reportspage:hover,
@@ -198,6 +202,14 @@ body {
   font-size: 14px;
   color: #444;
 }
+.main .btns {
+  gap: 20px;
+}
+.main .btns .btn {
+  border: 1px solid;
+  font-size: 18px;
+  font-weight: 600;
+}
 
 /* Responsive Main */
 @media (max-width: 768px) {
@@ -212,10 +224,106 @@ body {
     font-size: 12px;
   }
 }
+/* Subjectspage */
+/* subjects page  */
 
+.Subjectspage {
+  background-color: var(--content-bg);
+  display: flex;
+  box-shadow: 2px 3px 10px var(--card-shadow);
+}
+
+.search {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.search input {
+  padding: 8px 0;
+  border: 1px solid var(--border-color);
+}
+
+.search input::placeholder {
+  padding: 5px;
+  color: var(--main-color);
+}
+
+.search input:hover {
+  transform: scale(1.02);
+}
+
+.search .icon {
+  color: var(--accent-color);
+  background-color: var(--white-color);
+  padding: 15px;
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.search .icon:hover {
+  color: var(--white-color);
+  background-color: var(--accent-color);
+}
+
+.Subjectspage .content {
+  background-color: var(--content-bg);
+  margin: auto;
+  width: 100%;
+}
+
+.Subjectspage .content {
+  background-color: var(--secondary-color);
+}
+
+.Subjectspage .content table {
+  border-collapse: collapse;
+  font-size: 15px;
+  text-align: left;
+  box-shadow: 1px 2px 5px var(--card-shadow);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.Subjectspage .content table thead {
+  background-color: var(--text-secondary);
+  color: var(--text-primary);
+}
+
+.Subjectspage .content table thead th {
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+
+.Subjectspage .content table tbody tr button {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+@media (max-width: 768px) {
+  .Subjectspage {
+    padding: 15px;
+  }
+
+  .Subjectspage .title h3 {
+    font-size: 18px;
+  }
+
+  .Subjectspage .title p {
+    font-size: 13px;
+  }
+
+  .table th,
+  .table td {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
 /* Reports Page */
 .Reportspage {
   background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+  display: none;
 }
 
 .Reportspage .dropdown .repbtn {
@@ -316,19 +424,20 @@ body {
   position: absolute;
   right: 15px;
   top: -12px;
-  background: white;
+  background: var(--content-bg);
   border-radius: 20px;
   padding: 5px 12px;
-  color: var(--primary-color);
+  color: var(--text-secondary);
   font-size: 12px;
   font-weight: 600;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 /* Invoices Container */
 .invoices-container {
   background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
   color: var(--text-primary);
+  display: none;
 }
 
 .invoices-container .header {
@@ -457,19 +566,21 @@ body {
   }
 }
 
-.Notification {
+/* .Notification {
   border: 1px solid var(--border-color);
   box-shadow: var(--card-shadow);
   padding: 20px;
   border-radius: 12px;
   background-color: var(--white-color);
-  height: auto; /* بلاش height ثابت */
-  min-height: 300px; /* تحكم للـ UI */
-}
+  height: auto; 
+  min-height: 300px; 
+  display: none;
+} */
 
 /* Notifications Container */
 .Notification {
   background: linear-gradient(135deg, #ffffff 0%, #fef7ff 100%);
+  display: none;
 }
 
 .Notification .conteners {
@@ -487,7 +598,7 @@ body {
   transition: all 0.3s ease;
   overflow: hidden;
 }
-.Notification .conteners .cont::before {
+/* .Notification .conteners .cont::before {
   content: "";
   position: absolute;
   top: 0;
@@ -495,12 +606,12 @@ body {
   width: 4px;
   height: 100%;
   background: var(--primary-color);
-}
+} */
 
 .Notification .conteners .cont:hover {
   transform: translateY(-3px);
   box-shadow: var(--hover-shadow);
-  border-color: var(--primary-color);
+  border-color: var(--secondary-color);
 }
 
 /* Text */
@@ -511,7 +622,7 @@ body {
 }
 
 .Notification .conteners .cont span {
-  color: var(--primary-color);
+  color: var(--text-secondary);
   font-weight: 600;
 }
 
@@ -529,8 +640,8 @@ body {
   cursor: pointer;
   color: var(--text-secondary);
   transition: all 0.3s ease;
-  width: 24px;
-  height: 24px;
+  /* width: 24px; */
+  /* height: 24px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -539,7 +650,7 @@ body {
 
 .Notification .conteners .cont .close:hover {
   color: #ef4444;
-  background: rgba(239, 68, 68, 0.1);
+  /* background: rgba(239, 68, 68, 0.1); */
 }
 
 /* Responsive */
@@ -553,6 +664,10 @@ body {
   .Notification .conteners .cont span {
     font-size: 13px;
   }
+}
+
+.content .active {
+  display: block;
 }
 
 /* Main Section */

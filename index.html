@@ -16,49 +16,49 @@
   </head>
   <body>
     <div class="d-flex">
-      <div class="side sidebar d-none d-md-block">
-        <a href="" style="color: #bbdce5"
-          ><i id="menu-toggle" class="fa-solid fa-bars fs-2 d-md-none"></i>
-        </a>
+      <div class="side sidebar">
         <div class="personInfo">
           <img
             class="img-fluid rounded-circle shadow personalpic"
             src="img/profile-light.gif"
             alt="صوره الطالب"
-            srcset=""
           />
           <h3>أحمد جوهر</h3>
         </div>
         <div class="sidebar d-flex flex-column p-3">
           <nav class="nav flex-column sidebar-nav">
-            <a class="dashbtn nav-link text-white active" href="#" id="mainpage"
+            <a
+              class="dashbtn nav-link text-white active #mainpage"
+              href="#mainpage"
               ><i class="fa-solid fa-house ms-2"></i> الرئيسية
             </a>
-            <a class="dashbtn nav-link" href="#" id="Subjectspage"
+            <a class="dashbtn nav-link #Subjectspage" href="#Subjectspage"
               ><i class="fa-solid fa-book ms-2"></i> المواد
             </a>
-            <a class="dashbtn nav-link" href="#" id="Reportspage"
+            <a class="dashbtn nav-link #Reportspage" href="#Reportspage"
               ><i class="fa-solid fa-chart-line ms-2"></i> التقارير
             </a>
             <a class="dashbtn nav-link" href="#" id="Teacherspage"
               ><i class="fa-solid fa-chalkboard-teacher ms-2"></i> المعلمين
             </a>
-            <a class="dashbtn nav-link" href="#" id="Billingpage"
+            <a class="dashbtn nav-link #Billingpage" href="#Billingpage"
               ><i class="fa-regular fa-money-bill-1 ms-2"></i> الفواتير
             </a>
-
-            <a class="dashbtn nav-link" href="#" id="Notificationspage"
+            <a
+              class="dashbtn nav-link #Notificationspage"
+              href="#Notificationspage"
               ><i class="fa-solid fa-bell ms-2"></i> الإشعارات
             </a>
-            <a class="dashbtn nav-link" href="#" id="Settingspage"
+            <a class="dashbtn nav-link #Settingspage" href="#"
               ><i class="fa-solid fa-gear ms-2"></i> الإعدادات
             </a>
           </nav>
         </div>
       </div>
+
       <div class="content d-flex flex-column">
         <nav class="navbar">
-          <div class="container-fluid n">
+          <div class="container-fluid">
             <a class="navbar-brand">Navbar</a>
             <div class="endnav d-flex m-2">
               <form class="d-lg-flex d-none ms-2" role="search">
@@ -73,7 +73,7 @@
                 </button>
               </form>
               <button
-                type="button "
+                type="button"
                 class="me-4 btn position-relative d-none d-md-block"
               >
                 <i class="fa-solid fa-bell"></i>
@@ -81,16 +81,19 @@
                   class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
                 >
                   99+
-                  <span class="visually-hidden">unread messages</span>
                 </span>
               </button>
             </div>
-            <i id="menu-toggle" class="fa-solid fa-bars fs-2 d-md-none"></i>
+            <!-- زر القائمة في الموبايل -->
+            <button id="menu-toggle">
+              <i class="fa-solid fa-bars fs-2"></i>
+            </button>
           </div>
         </nav>
+
         <div class="contentdash d-flex flex-column justify-content-center">
           <!-- main page -->
-          <div class="main m-3">
+          <div class="main active m-3 bodycontent mainpage" id="mainpage">
             <div class="mb-3">
               <label for="name" class="form-label"
                 ><span><i class="fa-regular fa-user"></i> الاسم</span></label
@@ -129,81 +132,49 @@
                 disabled
               />
             </div>
-            <div class="mb-3">
-              <label for="age" class="form-label">
-                <span
-                  ><i class="fa-solid fa-phone"></i> رقم الهاتف
-                </span></label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="age"
-                placeholder="01068045341 "
-                disabled
-              />
+            <div class="phone row">
+              <div class="mb-3 col">
+                <label for="age" class="form-label">
+                  <span
+                    ><i class="fa-solid fa-phone"></i> رقم الهاتف
+                  </span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="age"
+                  placeholder="01068045341 "
+                  disabled
+                />
+              </div>
+              <div class="mb-3 col">
+                <label for="age" class="form-label"
+                  ><span>
+                    <i class="fa-solid fa-phone"></i> رقم هاتف ولي
+                  </span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="age"
+                  placeholder="01005338511 "
+                  disabled
+                />
+              </div>
             </div>
-            <div class="mb-3">
-              <label for="age" class="form-label"
-                ><span>
-                  <i class="fa-solid fa-phone"></i> رقم هاتف ولي
-                </span></label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="age"
-                placeholder="01005338511 "
-                disabled
-              />
-            </div>
-            <div class="row mt-4">
-              <div class="col-md-3 col-sm-6 mb-3">
-                <div class="card text-center border-0 shadow-sm">
-                  <div class="card-body">
-                    <i
-                      class="fa-solid fa-book-open fa-2x text-primary mb-2"
-                    ></i>
-                    <h5 class="card-title">5</h5>
-                    <p class="card-text text-muted">المواد المسجلة</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6 mb-3">
-                <div class="card text-center border-0 shadow-sm">
-                  <div class="card-body">
-                    <i
-                      class="fa-solid fa-chart-line fa-2x text-success mb-2"
-                    ></i>
-                    <h5 class="card-title">87%</h5>
-                    <p class="card-text text-muted">المعدل العام</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6 mb-3">
-                <div class="card text-center border-0 shadow-sm">
-                  <div class="card-body">
-                    <i class="fa-solid fa-tasks fa-2x text-warning mb-2"></i>
-                    <h5 class="card-title">12</h5>
-                    <p class="card-text text-muted">الواجبات المكتملة</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6 mb-3">
-                <div class="card text-center border-0 shadow-sm">
-                  <div class="card-body">
-                    <i class="fa-solid fa-clock fa-2x text-info mb-2"></i>
-                    <h5 class="card-title">3</h5>
-                    <p class="card-text text-muted">الواجبات المعلقة</p>
-                  </div>
-                </div>
-              </div>
+            <div
+              class="btns d-flex justify-content-around justify-content-md-start my-3"
+            >
+              <button class="btn btn-outline-primary">تعديل</button>
+              <button class="btn btn-outline-secondary">
+                الرجوع للصفحه الرئيسية
+              </button>
             </div>
           </div>
           <!-- Subjectspage -->
-          <div class="Subjectspage disactive"></div>
+          <div class="Subjectspage m-3"></div>
           <!-- Reportspage -->
-          <div class="Reportspage m-3">
+          <div class="Reportspage m-3 bodycontent" id="Reportspage">
             <div class="sub-choose d-flex mb-3">
               <div class="dropdown choose-Sub me-3">
                 <button
@@ -264,6 +235,30 @@
                   <td>تحت المراجعة</td>
                   <td>49</td>
                 </tr>
+                <tr>
+                  <th>2</th>
+                  <td>مراجعة على الوحدة الأولى</td>
+                  <td>تحت المراجعة</td>
+                  <td>49</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>مراجعة على الوحدة الأولى</td>
+                  <td>تحت المراجعة</td>
+                  <td>49</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>مراجعة على الوحدة الأولى</td>
+                  <td>تحت المراجعة</td>
+                  <td>49</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>مراجعة على الوحدة الأولى</td>
+                  <td>تحت المراجعة</td>
+                  <td>49</td>
+                </tr>
               </tbody>
             </table>
 
@@ -286,6 +281,30 @@
                   <td>Unit 1 English</td>
                   <td>Submitted</td>
                   <td>45</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>Review Unit 1</td>
+                  <td>Not Submitted</td>
+                  <td>38</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>Review Unit 1</td>
+                  <td>Not Submitted</td>
+                  <td>38</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>Review Unit 1</td>
+                  <td>Not Submitted</td>
+                  <td>38</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>Review Unit 1</td>
+                  <td>Not Submitted</td>
+                  <td>38</td>
                 </tr>
                 <tr>
                   <th>2</th>
@@ -325,7 +344,7 @@
               </tbody>
             </table>
           </div>
-          <div class="invoices-container m-3">
+          <div class="invoices-container m-3 bodycontent" id="Billingpage">
             <div
               class="header d-flex justify-content-between align-items-center mb-3"
             >
@@ -363,20 +382,41 @@
                     <td>Unit 1 English</td>
                     <td>2025-09-01</td>
                     <td><span class="badge paid">مدفوع</span></td>
-                    <td>$45</td>
+                    <td>45EG</td>
                   </tr>
                   <tr>
                     <td>2</td>
                     <td>Review Unit 1</td>
                     <td>2025-09-05</td>
                     <td><span class="badge unpaid">غير مدفوع</span></td>
-                    <td>$38</td>
+                    <td>38EG</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Review Unit 2</td>
+                    <td>2025-09-05</td>
+                    <td><span class="badge unpaid">غير مدفوع</span></td>
+                    <td>38EG</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Review Unit 3</td>
+                    <td>2025-09-05</td>
+                    <td><span class="badge paid">مدفوع</span></td>
+                    <td>38EG</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Review Unit 4</td>
+                    <td>2025-09-05</td>
+                    <td><span class="badge unpaid">غير مدفوع</span></td>
+                    <td>38EG</td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
-          <div class="Notification m-3">
+          <div class="Notification m-3 bodycontent" id="Notificationspage">
             <div class="conteners">
               <div class="cont">
                 <i class="fa-solid fa-x close"></i>
@@ -385,6 +425,11 @@
                   تم اضافه واجب جديد علي الوحده الاولي التسليم حتى يوم السبت
                   20/9
                 </p>
+                <div class="btns">
+                  <button class="btn btn-outline-secondary mt-3">
+                    الذهاب للكورس
+                  </button>
+                </div>
               </div>
               <div class="cont">
                 <i class="fa-solid fa-x close"></i>
@@ -393,6 +438,11 @@
                   تم اضافه واجب جديد علي الوحده الاولي التسليم حتى يوم السبت
                   20/9
                 </p>
+                <div class="btns">
+                  <button class="btn btn-outline-secondary mt-3">
+                    الذهاب للكورس
+                  </button>
+                </div>
               </div>
               <div class="cont">
                 <i class="fa-solid fa-x close"></i>
@@ -401,6 +451,11 @@
                   تم اضافه واجب جديد علي الوحده الاولي التسليم حتى يوم السبت
                   20/9
                 </p>
+                <div class="btns">
+                  <button class="btn btn-outline-secondary mt-3">
+                    الذهاب للكورس
+                  </button>
+                </div>
               </div>
               <div class="cont">
                 <i class="fa-solid fa-x close"></i>
@@ -409,35 +464,16 @@
                   تم اضافه واجب جديد علي الوحده الاولي التسليم حتى يوم السبت
                   20/9
                 </p>
+                <div class="btns">
+                  <button class="btn btn-outline-secondary mt-3">
+                    الذهاب للكورس
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-          <!--   <div
-            class="montg d-flex flex-column flex-sm-row justify-content-sm-around"
-          >
-            <div class="card m-2" style="width: 18rem">
-              <img src="img/books.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card’s content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-            <div class="card m-2" style="width: 18rem">
-              <img src="img/books.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card’s content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div> -->
+          <!-- Subjectspage -->
+          <div class="Settingspage m-3" id="Settingspage"></div>
         </div>
       </div>
     </div>
