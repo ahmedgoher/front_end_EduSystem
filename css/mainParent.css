@@ -1,0 +1,453 @@
+.children .feild {
+    background-color: #d3e7f5;
+    border-radius: 8px;
+    padding: 10px;
+    transition: all 0.3s;
+    margin: 10px;
+}
+
+.children .feild:hover {
+    transform: scale(1.02);
+    background-color: #dbe2e6;
+}
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* الوضع الفاتح */
+body.light {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+body.light .card {
+    background-color: #fff;
+    color: #212529;
+}
+
+body.light .navbar,
+body.light .sidebar {
+    background-color: #fff;
+    color: #212529;
+}
+
+/* الوضع الداكن */
+body.dark {
+    background-color: #1e1e1e;
+    color: #ddd;
+}
+
+body.dark .card {
+    background-color: #2c2c2c;
+    color: #ddd;
+}
+
+body.dark .navbar,
+body.dark .sidebar {
+    background-color: #2b2b2b;
+    color: #ddd;
+}
+
+body.dark a {
+    color: #ccc;
+}
+
+body.dark .table {
+    color: #ddd;
+}
+
+/* -------------------------- */
+#attendance {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+}
+
+#attendance h2 {
+    font-weight: 700;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#attendance p {
+    font-size: 15px;
+    color: #7f8c8d;
+    margin-bottom: 25px;
+}
+
+#attendance .table-css {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#attendance table thead {
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    color: #fff;
+    font-weight: 600;
+}
+
+#attendance thead th {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 12px;
+}
+
+#attendance tbody tr {
+    transition: background 0.2s ease-in-out;
+}
+
+#attendance tbody tr:hover {
+    background: #f1f8ff;
+}
+
+#attendance tbody td {
+    font-size: 15px;
+    color: #34495e;
+    padding: 12px;
+}
+
+#attendance .badge {
+    font-size: 13px;
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+#attendance .badge.bg-success {
+    background-color: #2ecc71 !important;
+}
+
+#attendance .badge.bg-danger {
+    background-color: #e74c3c !important;
+}
+
+/* ---------------------- */
+#messages {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+}
+
+#messages h2 {
+    font-weight: 700;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#messages p {
+    font-size: 15px;
+    color: #7f8c8d;
+    margin-bottom: 25px;
+}
+
+#messages .card {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* الهيدر */
+#messages .card-header {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#messages .card-header button {
+    font-size: 13px;
+    border-radius: 8px;
+}
+
+/* الرسائل */
+#messages .card-body {
+    background: #f9fbfd;
+    padding: 20px;
+}
+
+#messages .card-body .d-flex {
+    background: #fff;
+    padding: 12px 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-in-out;
+}
+
+#messages .card-body .d-flex:hover {
+    transform: scale(1.02);
+}
+
+#messages .card-body img {
+    border: 2px solid #59b3ef;
+    padding: 2px;
+}
+
+#messages .card-body h6 {
+    color: #2c3e50;
+}
+
+#messages .card-body p {
+    font-size: 14px;
+    color: #555;
+}
+
+#messages .card-footer {
+    background: #f1f5f9;
+    border-top: 1px solid #e0e6ed;
+    position: relative;
+}
+
+#messages .card-footer input {
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    width: 88%;
+}
+
+#messages .card-footer input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 4px rgba(52, 152, 219, 0.4);
+}
+
+#messages .card-footer button {
+    border-radius: 8px;
+    padding: 10px 15px;
+    position: absolute;
+    left: 25px;
+    width: 7%;
+}
+
+/* --------------------- */
+/* سيكشن الفواتير */
+#invoices h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+#invoices .card {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#invoices .table th {
+    font-weight: 600;
+    color: #34495e;
+}
+
+#invoices .table td {
+    font-size: 14px;
+    color: #555;
+}
+
+#invoices .badge {
+    font-size: 13px;
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+#invoices button {
+    border-radius: 8px;
+}
+
+/* -------------------- */
+/* سيكشن الإشعارات */
+#notifications h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+#notifications .card {
+    border-radius: 15px;
+}
+
+#notifications .list-group-item {
+    border: none;
+    padding: 15px 20px;
+    transition: background 0.2s ease-in-out;
+}
+
+#notifications .list-group-item:hover {
+    background: #eff5fb;
+}
+
+#notifications .fw-bold {
+    color: #34495e;
+}
+
+#notifications small {
+    font-size: 13px;
+}
+
+#notifications .badge {
+    font-size: 12px;
+    padding: 6px 10px;
+}
+
+/* ---------------------------- */
+.settings {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    max-height: fit-content;
+}
+
+.left-profile {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.left-profile h3 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.left-profile .small p {
+    text-align: start;
+    font-size: 13px;
+    margin: 6px 0;
+    color: #555;
+}
+
+.right-content {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.settings-tabs {
+    margin: 15px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.settings-form {
+    display: none;
+}
+
+.settings-form.active {
+    display: block;
+}
+
+.settings-form .form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.settings-form .form-group {
+    flex: 1;
+}
+
+.settings-form .form-label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+    color: #34495e;
+}
+
+.settings-form .form-control {
+    border-radius: 8px;
+    border: 1px solid #dcdcdc;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.settings-form .form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.25);
+}
+
+
+
+/* يأكد الهيدر مرتب */
+.right-content .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 992px) {
+    .Settingspage {
+        display: block;
+        /* من 2 عمود إلى عمود واحد */
+        gap: 14px;
+    }
+}
+
+.left-profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    text-align: left;
+    padding: 14px;
+}
+
+.left-profile h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.left-profile p {
+    font-size: 13px;
+    margin: 0;
+    color: #6b7280;
+}
+
+.right-content {
+    padding: 16px;
+}
+
+.settings-tabs {
+    overflow-x: auto;
+    padding-bottom: 8px;
+    gap: 8px;
+
+}
+
+.settings-form .form-group {
+    width: 100%;
+}
+
+/* make inputs full width */
+.settings-form .form-control {
+    width: 100%;
+}
+
+@media (max-width: 576px) {
+    .left-profile {
+        padding: 12px;
+    }
+
+    .left-profile h3 {
+        font-size: 16px;
+    }
+
+    .settings-tabs button {
+        padding: 7px 12px;
+        font-size: 14px;
+    }
+
+    .btn-save {
+        width: 100%;
+        text-align: center;
+    }
+
+    .right-content {
+        padding: 12px;
+    }
+}

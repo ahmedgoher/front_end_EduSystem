@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>لوحه تحكم الطالب</title>
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div class="d-flex">
+    <!-- الـ Sidebar -->
+    <div class="side sidebar">
+      <div class="X"
+        style="display: flex; justify-content: flex-start; align-items: center; padding: 10px; cursor:pointer; font-size: 1px; color: red;">
+        <i class="fa-solid fa-xmark fs-3"></i>
+      </div>
+
+      <div class="personInfo">
+        <img class="img-fluid rounded-circle shadow personalpic" src="img/profile-light.gif" alt="صوره الطالب" />
+        <h3>أحمد جوهر</h3>
+      </div>
+      <div class="sidebar d-flex flex-column p-3">
+        <nav class="nav flex-column sidebar-nav">
+          <a class="dashbtn nav-link text-white active #mainpage" href="#mainpage"><i
+              class="fa-solid fa-house ms-2"></i> الرئيسية
+          </a>
+          <a class="dashbtn nav-link #Subjectspage" href="#Subjectspage"><i class="fa-solid fa-book ms-2"></i> المواد
+          </a>
+          <a class="dashbtn nav-link #Reportspage" href="#Reportspage"><i class="fa-solid fa-chart-line ms-2"></i>
+            التقارير
+          </a>
+          <a class="dashbtn nav-link" href="#Teacherspage" id="Teacherspage"><i
+              class="fa-solid fa-chalkboard-teacher ms-2"></i>
+            المعلمين
+          </a>
+          <a class="dashbtn nav-link #Billingpage" href="#Billingpage"><i class="fa-regular fa-money-bill-1 ms-2"></i>
+            الفواتير
+          </a>
+          <a class="dashbtn nav-link #Notificationspage" href="#Notificationspage"><i class="fa-solid fa-bell ms-2"></i>
+            الإشعارات
+          </a>
+          <a class="dashbtn nav-link #Settingspage" href="#Settingspage"><i class="fa-solid fa-gear ms-2"></i> الإعدادات
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- زر إظهار القائمة (مخفي في البداية) -->
+    <div class="menu-btn2">
+      <i class="fa-solid fa-bars fs-3"></i>
+    </div>
+
+    <div class="content d-flex flex-column">
+      <nav class="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand">Navbar</a>
+          <div class="endnav d-flex m-2">
+            <form class="d-lg-flex d-none ms-2" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <button class="btn btn-outline-success me-1" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+            <button type="button" class="me-4 btn position-relative d-none d-md-block">
+              <i class="fa-solid fa-bell"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                99+
+              </span>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="contentdash d-flex flex-column justify-content-center">
+        <!-- main page -->
+        <div class="main active m-3 bodycontent mainpage" id="mainpage">
+          <!-- <div class="name-photo"> -->
+          <!-- <div class="inform"> -->
+          <!-- <div class="img">
+                <img id="profile-img" src="./img/books.png" alt="profile image" width="120">
+              </div> -->
+          <!-- <div class="inf">
+              <h2 class="name">ahmed morsi mohamed owais</h2>
+              <p class="alsaf2"> الصف الثالث الثانوي </p>
+            </div> -->
+          <!-- </div> -->
+          <!-- <div class="button-edit"> -->
+          <!-- <button id="edit-btn"><i class="fa-solid fa-pen"></i> تعديل الصورة الشخصية </button> -->
+          <!-- input مخفي لاختيار الصورة -->
+          <!-- <input type="file" id="file-input" accept="image/*" style="display:none;"> -->
+          <!-- </div> -->
+          <!-- </div> -->
+          <!-- 
+          <script>
+            const editBtn = document.getElementById("edit-btn");
+            const fileInput = document.getElementById("file-input");
+            const profileImg = document.getElementById("profile-img");
+
+            // لما تدوس على الزرار يفتح ملفات الجهاز
+            editBtn.addEventListener("click", () => fileInput.click());
+
+            // لما تختار صورة جديدة تتعرض مكان القديمة
+            fileInput.addEventListener("change", (event) => {
+              const file = event.target.files[0];
+              if (file) {
+                profileImg.src = URL.createObjectURL(file);
+              }
+            });
+          </script> -->
+
+
+          <div class="detiels">
+            <div class="feild" data-field="code">
+              <i class="fa-solid fa-hashtag"></i>
+              <div class="part2-feild">
+                <p>كود الطالب</p>
+                <h1>1939429</h1>
+              </div>
+            </div>
+
+            <div class="feild" data-field="name">
+              <i class="fa-solid fa-id-card"></i>
+              <div class="part2-feild">
+                <p>اسم الطالب</p>
+                <h1>ahmed morsi mohamed owais</h1>
+              </div>
+              <!-- <button class="edit-btn"><i class="fa-solid fa-pen"></i></button> -->
+            </div>
+
+            <div class="feild" data-field="email">
+              <i class="fa-solid fa-envelope"></i>
+              <div class="part2-feild">
+                <p>البريد الإلكتروني</p>
+                <h1>morsi6540@gmail.com</h1>
+              </div>
+            </div>
+
+            <div class="feild" data-field="phone">
+              <i class="fa-solid fa-phone"></i>
+              <div class="part2-feild">
+                <p>رقم الهاتف</p>
+                <h1>+2001550277545</h1>
+              </div>
+              <!-- <button class="edit-btn"><i class="fa-solid fa-pen"></i></button> -->
+            </div>
+
+            <div class="feild" data-field="class">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <div class="part2-feild">
+                <p>الصف الدراسي</p>
+                <h1>الصف الثالث الثانوي</h1>
+              </div>
+              <!-- <button class="edit-btn"><i class="fa-solid fa-pen"></i></button> -->
+            </div>
+
+            <div class="feild" data-field="password">
+              <i class="fa-solid fa-key"></i>
+              <div class="part2-feild">
+                <p>كلمة المرور</p>
+                <h1>***********</h1>
+              </div>
+              <!-- <button class="edit-btn"><i class="fa-solid fa-pen"></i></button> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Popup -->
+        <div class="modal-overlay" id="modalOverlay">
+          <div class="modal-box">
+            <h2 id="modalTitle"></h2>
+            <label for="modalInput" class="modal-label" id="modalLabel"></label>
+            <input type="text" id="modalInput" class="modal-input">
+            <div class="modal-actions">
+              <button class="cancel-btn" id="cancelModal">الغاء</button>
+              <button class="save-btn" id="saveModal">حفظ</button>
+            </div>
+          </div>
+        </div>
+        <!-- </script> -->
+        <!-- Subjectspage -->
+        <div class="Subjectspage m-3 bodycontent" id="Subjectspage">
+          <div class="row d-flex align-items-center justify-content-center">
+            <div class="content col-md-3 text-center mt-3 ">
+              <!-- <div class="cards mb-4">
+                <div class="card ms-3">
+                  <img src="img/عربي.jpeg" class="card-img-top" alt="...">
+                  <h5 class="card-title">لغه عربيه </h5>
+                  <div class="card-body">
+                    <p><i class="fas fa-chalkboard-teacher icon"></i> <span class="Num">5</span> مدرس</p>
+                    <p><i class="fas fa-book icon"></i> <span class="Num">3</span> كورس</p>
+                  </div>
+                </div>
+                <div class="card ms-3">
+                  <img src="img/انجليزي.png" class="card-img-top" alt="...">
+                  <h5 class="card-title">انجليزي</h5>
+                  <div class="card-body">
+                    <p><i class="fas fa-chalkboard-teacher icon"></i> <span class="Num">5</span> مدرس</p>
+                    <p><i class="fas fa-book icon"></i> <span class="Num">3</span> كورس</p>
+                  </div>
+                </div>
+                <div class="card ms-3">
+                  <img src="img/كيمياء.png" class="card-img-top" alt="...">
+                  <h5 class="card-title">كيمياء </h5>
+                  <div class="card-body">
+                    <p><i class="fas fa-chalkboard-teacher icon"></i> <span class="Num">5</span> مدرس</p>
+                    <p><i class="fas fa-book icon"></i> <span class="Num">3</span> كورس</p>
+                  </div>
+                </div>
+                <div class="card ms-3">
+                  <img src="img/عربي.jpeg" class="card-img-top" alt="...">
+                  <h5 class="card-title">لغه عربيه </h5>
+                  <div class="card-body">
+                    <p><i class="fas fa-chalkboard-teacher icon"></i> <span class="Num">5</span> مدرس</p>
+                    <p><i class="fas fa-book icon"></i> <span class="Num">3</span> كورس</p>
+                  </div>
+                </div>
+                <div class="card ms-3">
+                  <img src="img/انجليزي.png" class="card-img-top" alt="...">
+                  <h5 class="card-title">انجليزي</h5>
+                  <div class="card-body">
+                    <p><i class="fas fa-chalkboard-teacher icon"></i> <span class="Num">5</span> مدرس</p>
+                    <p><i class="fas fa-book icon"></i> <span class="Num">3</span> كورس</p>
+                  </div>
+                </div>
+                <div class="card ms-3">
+                  <img src="img/كيمياء.png" class="card-img-top" alt="...">
+                  <h5 class="card-title">كيمياء </h5>
+                  <div class="card-body">
+                    <p><i class="fas fa-chalkboard-teacher icon"></i> <span class="Num">5</span> مدرس</p>
+                    <p><i class="fas fa-book icon"></i> <span class="Num">3</span> كورس</p>
+                  </div>
+                </div>
+              </div> -->
+              <div class="search col-md-8">
+                <input type="search" class="form-control me-3" placeholder="اكتب للبحث" />
+                <i class="fa-solid fa-magnifying-glass icon me-3 btn btn-outline-success me-1"></i>
+              </div>
+              <div class="mb-3 p-3 btns">
+                <button class="btn-btn-secondary me-3" onclick="filterCourse('all')">الكل</button>
+                <button class="btn-btn-secondary me-3" onclick="filterCourse('عربي')">عربي</button>
+                <button class="btn-btn-secondary me-3" onclick="filterCourse('انجليزي')">انجليزي</button>
+                <button class="btn-btn-secondary me-3" onclick="filterCourse('كيمياء')">كيمياء</button>
+              </div>
+              <!-- <div class="card p-3"> -->
+              <table class="table table-hover text-center align-middle ">
+                <thead>
+                  <tr>
+                    <th>ترتيب</th>
+                    <th>كود الكورس</th>
+                    <th>المحاضرة</th>
+                    <th>تفاصيل الكورس</th>
+                    <th>الانتهاء من الكورس</th>
+                    <th>عرض</th>
+                  </tr>
+                </thead>
+                <tbody id="courseTable">
+                  <!-- <tr>
+                        <td colspan="6">لا توجد بيانات</td>
+                      </tr> -->
+
+                  <tr data-subject="عربي">
+                    <td>1</td>
+                    <td>CS101</td>
+                    <td>مقدمة في الوحده الاولي</td>
+                    <td> شرح دروس نجيب محفوظ</td>
+                    <td>
+                      <span class="text-danger fw-bold">20%</span>
+                      <div class="progress">
+                        <div class="progress-bar bg-danger" style="width:20%"></div>
+                      </div>
+                    </td>
+                    <td>
+                      <button class="btn btn-sm btn-info">عرض</button>
+                    </td>
+                  </tr>
+                  <tr data-subject="انجليزي">
+                    <td>2</td>
+                    <td>WEB202</td>
+                    <td>مقدمه في زمن الماضي البسيط</td>
+                    <td>تعلم الماضي البسيط</td>
+                    <td>
+                      <span class="text-warning fw-bold">45%</span>
+                      <div class="progress">
+                        <div class="progress-bar bg-warning" style="width:45%"></div>
+                      </div>
+                    </td>
+                    <td>
+                      <button class="btn btn-sm btn-info">عرض</button>
+                    </td>
+                  </tr>
+                  <tr data-subject="انجليزي">
+                    <td>3</td>
+                    <td>DB303</td>
+                    <td>مقدمه عن المضارع التام</td>
+                    <td> فهم المضارع التام </td>
+                    <td>
+                      <span class="text-success fw-bold">70%</span>
+                      <div class="progress">
+                        <div class="progress-bar bg-success" style="width:70%"></div>
+                      </div>
+                    </td>
+                    <td>
+                      <button class="btn btn-sm btn-info">عرض</button>
+                    </td>
+                  </tr>
+                  <tr data-subject="كيمياء">
+                    <td>4</td>
+                    <td>REACT404</td>
+                    <td>شرح كيمياء العضويه</td>
+                    <td> فهم الكيمياء العضويه </td>
+                    <td>
+                      <span class="text-success fw-bold">90%</span>
+                      <div class="progress">
+                        <div class="progress-bar bg-success" style="width:90%"></div>
+                      </div>
+                    </td>
+                    <td>
+                      <button class="btn btn-sm btn-info">عرض</button>
+                    </td>
+                  </tr>
+                  <tr data-subject="كيمياء">
+                    <td>5</td>
+                    <td>SEC505</td>
+                    <td>شرح الكيمياء الغير العضويه</td>
+                    <td> فهم الكيمياء الغير العضويه</td>
+                    <td>
+                      <span class="text-primary fw-bold">100%</span>
+                      <div class="progress">
+                        <div class="progress-bar bg-primary" style="width:100%"></div>
+                      </div>
+                    </td>
+                    <td>
+                      <button class="btn btn-sm btn-info">عرض</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="d-flex justify-content-end mt-3">
+                <button class="btn btn-secondary ms-3">السابق</button>
+                <button class="btn btn-primary">التالي</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Reportspage -->
+        <div class="Reportspage m-3 bodycontent " id="Reportspage">
+          <div class="sub-choose d-flex mb-3">
+            <div class="dropdown choose-Sub me-3">
+              <button class="btn dropdown-toggle repbtn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                اختر المادة
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" data-subject="arabic" href="#">عربي</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" data-subject="english" href="#">انجليزي</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" data-subject="chemistry" href="#">كيمياء</a>
+                </li>
+              </ul>
+            </div>
+            <div class="input-group">
+              <input type="text" id="studentName" value="عربي" disabled />
+              <label for="studentName">اسم المادة</label>
+            </div>
+          </div>
+
+          <!-- جدول عربي -->
+          <table class="table table-striped table-hover subject-table" id="arabic">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>اسم الكورس</th>
+                <th>تسليم الواجب</th>
+                <th>درجات الامتحان</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1</th>
+                <td>الوحدة الأولى عربي</td>
+                <td>تم التسليم</td>
+                <td>50</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>مراجعة على الوحدة الأولى</td>
+                <td>تحت المراجعة</td>
+                <td>49</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>مراجعة على الوحدة الأولى</td>
+                <td>تحت المراجعة</td>
+                <td>49</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>مراجعة على الوحدة الأولى</td>
+                <td>تحت المراجعة</td>
+                <td>49</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>مراجعة على الوحدة الأولى</td>
+                <td>تحت المراجعة</td>
+                <td>49</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>مراجعة على الوحدة الأولى</td>
+                <td>تحت المراجعة</td>
+                <td>49</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- جدول إنجليزي -->
+          <table class="table table-striped table-hover subject-table d-none" id="english">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>اسم الكورس</th>
+                <th>تسليم الواجب</th>
+                <th>درجات الامتحان</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1</th>
+                <td>Unit 1 English</td>
+                <td>Submitted</td>
+                <td>45</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>Review Unit 1</td>
+                <td>Not Submitted</td>
+                <td>38</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>Review Unit 1</td>
+                <td>Not Submitted</td>
+                <td>38</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>Review Unit 1</td>
+                <td>Not Submitted</td>
+                <td>38</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>Review Unit 1</td>
+                <td>Not Submitted</td>
+                <td>38</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>Review Unit 1</td>
+                <td>Not Submitted</td>
+                <td>38</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- جدول كيمياء -->
+          <table class="table table-striped table-hover subject-table d-none" id="chemistry">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>اسم الكورس</th>
+                <th>تسليم الواجب</th>
+                <th>درجات الامتحان</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1</th>
+                <td>الوحدة الأولى كيمياء</td>
+                <td>تم التسليم</td>
+                <td>48</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>الوحدة الثانية كيمياء</td>
+                <td>لم يسلم بعد</td>
+                <td>41</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="invoices-container m-3 bodycontent" id="Billingpage">
+          <div class="header d-flex justify-content-between align-items-center mb-3">
+            <div class="title">
+              <h3>الفواتير</h3>
+              <p>آخر الفواتير الخاصة بالكورسات المشترك بها</p>
+            </div>
+
+            <!-- Search Box -->
+            <form class="search-box" role="search">
+              <input type="search" placeholder="ابحث عن فاتورة..." aria-label="Search" />
+              <!-- <i class="fa-solid fa-magnifying-glass"></i>س -->
+            </form>
+          </div>
+
+          <!-- Invoices Table -->
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>اسم الكورس</th>
+                  <th>تاريخ الفاتورة</th>
+                  <th>الحالة</th>
+                  <th>المبلغ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Unit 1 English</td>
+                  <td>2025-09-01</td>
+                  <td><span class="badge paid">مدفوع</span></td>
+                  <td>45EG</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Review Unit 1</td>
+                  <td>2025-09-05</td>
+                  <td><span class="badge unpaid">غير مدفوع</span></td>
+                  <td>38EG</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Review Unit 2</td>
+                  <td>2025-09-05</td>
+                  <td><span class="badge unpaid">غير مدفوع</span></td>
+                  <td>38EG</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Review Unit 3</td>
+                  <td>2025-09-05</td>
+                  <td><span class="badge paid">مدفوع</span></td>
+                  <td>38EG</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Review Unit 4</td>
+                  <td>2025-09-05</td>
+                  <td><span class="badge unpaid">غير مدفوع</span></td>
+                  <td>38EG</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="Notification m-3 bodycontent" id="Notificationspage">
+          <div class="conteners">
+            <div class="cont">
+              <i class="fa-solid fa-x close"></i>
+              <h5>ماده عربي <span>-مستر يوسف</span></h5>
+              <p>
+                تم اضافه واجب جديد علي الوحده الاولي التسليم حتى يوم السبت
+                20/9
+              </p>
+              <div class="btns">
+                <button class="btn btn-outline-secondary mt-3">
+                  الذهاب للكورس
+                </button>
+              </div>
+            </div>
+            <div class="cont">
+              <i class="fa-solid fa-x close"></i>
+              <h5>ماده عربي <span>-مستر يوسف</span></h5>
+              <p>
+                تم اضافه واجب جديد علي الوحده الاولي التسليم حتى يوم السبت
+                20/9
+              </p>
+              <div class="btns">
+                <button class="btn btn-outline-secondary mt-3">
+                  الذهاب للكورس
+                </button>
+              </div>
+            </div>
+            <div class="cont">
+              <i class="fa-solid fa-x close"></i>
+              <h5>ماده عربي <span>-مستر يوسف</span></h5>
+              <p>
+                تم اضافه واجب جديد علي الوحده الاولي التسليم حتى يوم السبت
+                20/9
+              </p>
+              <div class="btns">
+                <button class="btn btn-outline-secondary mt-3">
+                  الذهاب للكورس
+                </button>
+              </div>
+            </div>
+            <div class="cont">
+              <i class="fa-solid fa-x close"></i>
+              <h5>ماده عربي <span>-مستر يوسف</span></h5>
+              <p>
+                تم اضافه واجب جديد علي الوحده الاولي التسليم حتى يوم السبت
+                20/9
+              </p>
+              <div class="btns">
+                <button class="btn btn-outline-secondary mt-3">
+                  الذهاب للكورس
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- settingspage -->
+        <div class="Settingspage m-3 bodycontent" id="Settingspage">
+          <!-- الشمال: بروفايل -->
+          <div class="settings-card left-profile">
+            <div class="avatar">
+              <img src="img/books.png" alt="avatar" style="width: 100">
+            </div>
+            <h3>أحمد جوهر</h3>
+            <p>الصف الثالث الثانوي — ID: 12345</p>
+            <div class="btns">
+              <button id="edit-btn" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-pen"></i> تعديل الصورة
+                الشخصية </button>
+              <!-- input مخفي لاختيار الصورة -->
+              <input type="file" id="file-input" accept="image/*" style="display:none;">
+              <button class="btn btn-light btn-sm">حذف</button>
+            </div>
+          </div>
+
+          <!-- اليمين: محتوى الإعدادات -->
+          <section class="settings-card right-content">
+            <div class="card-header">
+              <h4>إعدادات الحساب</h4>
+              <div class="settings-tabs">
+                <button class="active">البيانات</button>
+                <button>كلمة المرور</button>
+                <button>الإشعارات</button>
+              </div>
+            </div>
+
+            <form class="settings-form active">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">الاسم</label>
+                  <input class="form-control " placeholder="أحمد عبد الناصر">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">الصف</label>
+                  <input class="form-control" placeholder="الثالث الثانوي">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">البريد الإلكتروني</label>
+                  <input class="form-control" placeholder="khaled@gmail.com">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">رقم الهاتف</label>
+                  <input class="form-control" placeholder="01096541656">
+                </div>
+              </div>
+              <button class="btn btn-primary btn-save">حفظ التغييرات</button>
+            </form>
+            <!-- change password  -->
+            <form class="settings-form">
+              <div class=" form-row">
+                <div class="form-group">
+                  <label class="form-label">كلمه المرور الحاليه </label>
+                  <input type="password" class="form-control" placeholder="current password">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">تاكيد كلمه المرور الحاليه</label>
+                  <input type="password" class="form-control " placeholder="Sure current password">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">كلمه المرور الجديده </label>
+                  <input type="password" class="form-control" placeholder="New password">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">تاكيد كلمه المرور الجديده</label>
+                  <input type="password" class="form-control" placeholder="Sure New password">
+                </div>
+              </div>
+
+              <button class="btn btn-primary btn-save">حفظ التغييرات</button>
+            </form>
+            <div class="settings-form">
+              <div class="card shadow-sm p-3 mb-4 rounded-3">
+                <h5 class="fw-bold mb-3">
+                  <i class="fa-solid fa-bell me-2 text-primary"></i> إعدادات الإشعارات
+                </h5>
+                <div class="form-check form-switch mb-2">
+                  <input class="form-check-input" type="checkbox" id="notifyAll" checked>
+                  <label class="form-check-label" for="notifyAll">تفعيل كل الإشعارات</label>
+                </div>
+                <hr>
+                <div class="form-check form-switch mb-2">
+                  <input class="form-check-input" type="checkbox" id="notifyCourses" checked>
+                  <label class="form-check-label" for="notifyCourses">إشعار عند إضافة كورسات جديدة</label>
+                </div>
+                <div class="form-check form-switch mb-2">
+                  <input class="form-check-input" type="checkbox" id="notifyAssignments">
+                  <label class="form-check-label" for="notifyAssignments">إشعار عند إضافة واجبات أو امتحانات</label>
+                </div>
+                <div class="form-check form-switch mb-2">
+                  <input class="form-check-input" type="checkbox" id="notifyMessages" checked>
+                  <label class="form-check-label" for="notifyMessages">إشعار عند استلام رسالة جديدة</label>
+                </div>
+
+                <hr>
+
+                <div class="form-check form-switch mb-2">
+                  <input class="form-check-input" type="checkbox" id="notifyEmail">
+                  <label class="form-check-label" for="notifyEmail">استقبال إشعارات عبر البريد الإلكتروني</label>
+                </div>
+
+                <div class="form-check form-switch mb-2">
+                  <input class="form-check-input" type="checkbox" id="notifySite" checked>
+                  <label class="form-check-label" for="notifySite">استقبال إشعارات داخل الموقع فقط</label>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/all.min.js"></script>
+</body>
+
+</html>
